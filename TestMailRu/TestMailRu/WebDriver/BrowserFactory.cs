@@ -16,7 +16,7 @@ namespace TestMailRu.WebDriver
         {
             IWebDriver driver = null;
 
-            switch (type) 
+            switch (type)   
             { 
                 case BrowserType.Chrome:
                     {
