@@ -14,7 +14,7 @@ namespace TestMailRu.Tests
         private HomePage homePage;
         private PersonalAccountPage personalAccountPage;
 
-        private string password = "ITNUA71pd";// данные брать из тексьлвого документв
+        private string password = "ITNUA71pd";// данные брать из текстового документа
         private string login = "epam.test.kopylov@mail.ru";
         private string textSubject = "Test mail for EPAM";
         private string mailContent = "Lorem Ipsum is simply dummy text of the printing and typesetting " +

@@ -20,7 +20,7 @@ namespace TestMailRu.Tests
         [TestCleanup]
         public void CleanUp()
         {
-            Browser.Quit();
+           Browser.Quit();
         }
 
     }

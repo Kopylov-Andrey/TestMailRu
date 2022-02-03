@@ -17,13 +17,10 @@ namespace TestMailRu.WebObject
         private readonly BaseElement buttonMenuMail = new BaseElement(By.XPath("//*[@id='ph-whiteline']/div/div[2]/div[2]/span[3]"));
         private readonly BaseElement ExtmailButton = new BaseElement(By.XPath("//*[@id='ph-whiteline']/div/div[3]/div/div/a[3]/div[2]"));
         private readonly BaseElement ButtonDraft = new BaseElement(By.XPath("//*[@id='sideBarContent']/div/nav/a[7]"));
-        private readonly BaseElement Draft = new BaseElement(By.XPath("//span[starts-with(text(),’Test mail for EPAM’)]"));
-        private readonly BaseElement IconDraft = new BaseElement(By.XPath("//*[@id='app-canvas']/div/div[1]/div[1]/div/div[2]/span/div[2]/div/div/div/div/div[1]/div/div/div/div[1]/div/div/a[1]/div[3]/div/button/div/div/span"));
         private readonly BaseElement deleteDraft = new BaseElement(By.XPath("//*[@id='app-canvas']/div/div[1]/div[1]/div/div[1]/span/div[2]/table/tbody/tr/td/span[2]/div[1]/span/span"));
+        private readonly BaseElement IconDraft = new BaseElement(By.XPath("//*[text()='Test mail for EPAM']/ancestor::*[6]/div[3]"));
 
-
-
-
+       
 
 
 
@@ -53,9 +50,7 @@ namespace TestMailRu.WebObject
 
         public void DeleteDraft()
         {
-           
-            IconDraft.Click();
-
+            IconDraft.Click();         
             deleteDraft.Click();
         }
 
