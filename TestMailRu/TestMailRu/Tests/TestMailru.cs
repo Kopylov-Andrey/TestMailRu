@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TestMailRu.WebObject;
+using TestMailRu.WebDriver;
 
 
 
@@ -10,26 +11,20 @@ namespace TestMailRu.Tests
     [TestClass]
     public class TestMailru : BaseTest
     {
-        private string baseUrl = "https://mail.ru/";
+       
         private HomePage homePage;
         private PersonalAccountPage personalAccountPage;
 
-        private string password = "ITNUA71pd";// данные брать из текстового документа
-        private string login = "epam.test.kopylov@mail.ru";
-        private string textSubject = "Test mail for EPAM";
-        private string mailContent = "Lorem Ipsum is simply dummy text of the printing and typesetting " +
-                                     "industry. Lorem Ipsum has been the industry's standard dummy text" +
-                                     " ever since the 1500s, when an unknown printer took a galley of " +
-                                     "type and scrambled it to make a type specimen book. ";
-        
-
+        private string password = Configuration.Password;
+        private string login = Configuration.Login;
+       
         [TestMethod]
         public void TestSavingLetterInDraft()
         {
             homePage = new HomePage();
             homePage.LogInToMailbox(login, password);
             personalAccountPage = new PersonalAccountPage();
-            personalAccountPage.WriteMail(login, textSubject, mailContent);
+            personalAccountPage.WriteMail(login, "Test mail for EPAM", "Lorem Ipsum is simply dummy text of the printing and typesetting");
             personalAccountPage.ExitMail();
         }
 

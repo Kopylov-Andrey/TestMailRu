@@ -49,7 +49,9 @@ namespace TestMailRu.WebDriver
 
         public static IWebDriver GetDriver()
         {
-            return driver;
+            
+                return driver;
+            
         }
 
         public static void Quit()

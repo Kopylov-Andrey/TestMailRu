@@ -15,6 +15,10 @@ namespace TestMailRu.WebDriver
 
         public static string Browser => GetEnviromentVar("Browser", "Chrome");
 
+        public static string Password => GetEnviromentVar("Password", "ITNUA71pd");
+
+        public static string Login => GetEnviromentVar("Login", "epam.test.kopylov@mail.ru");
+
         public static string StartUrl => GetEnviromentVar("StartUrl", "https://mail.ru/");
 
     }

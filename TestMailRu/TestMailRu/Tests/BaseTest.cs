@@ -6,7 +6,7 @@ namespace TestMailRu.Tests
     [TestClass]
     public  class BaseTest
     {
-        protected static Browser Browser = Browser.Instance;
+        protected static Browser Browser;
 
         [TestInitialize]
         public void SetUp()

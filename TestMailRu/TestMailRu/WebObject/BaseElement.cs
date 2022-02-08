@@ -16,6 +16,7 @@ namespace TestMailRu.WebObject
 
         public BaseElement(By locator, string name)
         {
+            
             this.locator = locator; 
             this.name = name == "" ? GetText() : name;
         }
@@ -36,6 +37,7 @@ namespace TestMailRu.WebObject
         {
             try
             {
+                WaitForIsVisible();
                 element = Browser.GetDriver().FindElement(locator);
             }
             catch (Exception)

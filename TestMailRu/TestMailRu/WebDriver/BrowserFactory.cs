@@ -31,10 +31,16 @@ namespace TestMailRu.WebDriver
                         //
                         break;
                     }
-                    
-
+                  
             }
 
+            if(driver == null)
+            {
+                var service = ChromeDriverService.CreateDefaultService();
+                var option = new ChromeOptions();
+                option.AddArgument("disable-infobars");
+                driver = new ChromeDriver(service, option, TimeSpan.FromSeconds(timeoutSec));
+            }
 
             return driver; 
         }
