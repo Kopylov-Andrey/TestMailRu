@@ -27,7 +27,7 @@ namespace TestMailRu.Tests
             personalAccountPage.WriteMail(login, "Test mail for EPAM", "Lorem Ipsum is simply dummy text of the printing and typesetting");
             personalAccountPage.ExitMail();
         }
-
+        //
         [TestMethod]
         public void TestzDeletedLetterInDraft()
         {
